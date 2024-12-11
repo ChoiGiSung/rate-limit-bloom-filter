@@ -4,10 +4,10 @@ import java.util.*
 import kotlin.math.abs
 
 class BloomFilter(
-    private val bitSet: BitSet,
     private val size: Int,
     private val hashSeeds: IntArray
 ) {
+    private val bitSet: BitSet = BitSet(size)
 
     fun add(item: String) {
         for (seed in hashSeeds) {
